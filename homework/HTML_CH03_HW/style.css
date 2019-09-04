@@ -1,0 +1,7 @@
+.wrapper {
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+    margin-top: 0%;
+    max-width: 960px; /* 2 */
+width: 80%;}
+    body {background-color: darkgrey; color: whitesmoke}
