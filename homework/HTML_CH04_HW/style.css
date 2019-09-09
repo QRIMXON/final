@@ -1,0 +1,4 @@
+p { font-size: 20px; line-height: 4em; color: #6a5acd; }
+header {color: rgb(106, 90, 205)}
+div {background-color:rgba(255, 99, 71, 0.4); color:#6a5acd}
+div > section, div h1 {color:#cd5a6d}
