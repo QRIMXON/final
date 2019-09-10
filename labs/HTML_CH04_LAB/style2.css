@@ -1,0 +1,5 @@
+body {background-image: url("images/repeat2.jpg");background-repeat: repeat-x;}
+footer {background-color: lightblue; font-family: Arial, Helvetica, sans-serif; color: darkblue; padding-top: 10px;
+    padding-right: 10px; padding-bottom: 10px; padding-left: 10px; border-style: dashed; border-color: darkblue}
+h1 {text-decoration-line: underline; text-decoration-style: dotted; text-shadow: 2px 2px #ff0000;
+    background: rgba(76, 175, 80, 0.5); font-family:sans-serif; font-size: 4em;}
