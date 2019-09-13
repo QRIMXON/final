@@ -1,0 +1,6 @@
+#wrapper {margin-left: 5%; margin-right: 5%; padding: 10px; background-color: black;
+background-image: url(images/galaxy.jpg); background-repeat: repeat-x;}
+h2 {color: rgb(131, 133, 134);  border-bottom: 5px solid rgb(131, 133, 134); border-style: inset; border-color:white;}
+a {color:rgb(91, 113, 136)}
+p {margin: 0%; padding: 10px; color: whitesmoke}
+body {background-color: black}
