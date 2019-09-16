@@ -1,0 +1,7 @@
+ * {font-family:'Arial Narrow Bold', sans-serif}
+ h1 {font-size: x-large}
+ h2 {font-size: larger}
+ h3 {font-size: medium}
+ a {color: maroon;}
+ a:hover {color: steelblue;}
+ a:visited {color:maroon}
