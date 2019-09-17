@@ -5,3 +5,7 @@
  a {color: maroon;}
  a:hover {color: steelblue;}
  a:visited {color:maroon}
+footer {text-align:center; font-size: 0.7em; border: 1px solid steelblue; background-color: steelblue;}
+#wrapper { width: 900px;border: 1px solid steelblue; box-shadow: 5px 10px; max-width: 900px; margin: auto;}
+header {border-bottom: 5px solid steelblue;}
+#main {margin:auto; padding: 15px}
