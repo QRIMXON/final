@@ -1,11 +1,11 @@
  * {font-family:'Arial Narrow Bold', sans-serif}
  h1 {font-size: x-large}
- h2 {font-size: larger}
+ h2 {font-size: x-large}
  h3 {font-size: medium}
  a {color: maroon;}
  a:hover {color: steelblue;}
  a:visited {color:maroon}
 footer {text-align:center; font-size: 0.7em; border: 1px solid steelblue; background-color: steelblue;}
 #wrapper { width: 900px;border: 1px solid steelblue; box-shadow: 5px 10px; max-width: 900px; margin: auto;}
-header {border-bottom: 5px solid steelblue;}
+header {border-bottom: 5px solid steelblue; padding:5px;}
 #main {margin:auto; padding: 15px}
