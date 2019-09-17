@@ -10,52 +10,45 @@
 * {box-sizing: border-box;}
 
 body { margin: 0; font-family: Arial, Helvetica, sans-serif;}
-
 .header { text-align: center; padding: 32px;}
-
-.row { display: flex; flex-wrap: wrap;padding: 0 4px;}
-
-.column {flex: 100%; padding: 0 4px;}
-
-.column img {margin-top: 8px; vertical-align: middle;}
+article {width: 200px; float:left; margin-left:5px; text-align: center}
+.column h1 {margin: 0;}
+.column p {margin: 0}
 
     </style>
 </head>
 <body>
-      <div class="row"> 
-        <div class="column">
-          <img src="images/a1.jpg" style="width:10%">
-          <span class="caption">
+        <article>
+          <img src="images/a1.jpg" style="width:15%">
           <h1>girl</h1>
           <p>girl skateboards eric koston pro model</p>
-          <img src="images/a2.jpg" style="width:10%">
-          <img src="images/a3.jpg" style="width:10%">
-          <h1>girl</h1>s
-          <p>girl skateboards eric koston pro model</p>       
-          <img src="images/a4.jpg" style="width:10%">       
+          <img src="images/a2.jpg" style="width:15%">
+          <h1>girl</h1>
+          <p>girl skateboards eric koston pro model</p>     
+        </div> 
+        <div class="column">
+                <img src="images/a3.jpg" style="width:15%">
+                <h1>girl</h1>s
+                <p>girl skateboards eric koston pro model</p>       
+                <img src="images/a4.jpg" style="width:15%"> 
+                <h1>girl</h1>
+                <p>girl skateboards eric koston pro model</p> 
+        </div> 
+        <div class="column">
+          <img src="images/a7.jpg" style="width:15%">
           <h1>girl</h1>
           <p>girl skateboards eric koston pro model</p>
-        </div> 
-        <div class="column">
-                <img src="images/a7.jpg" style="width:24%">
-                <img src="images/a8.jpg" style="width:24%">
-        </div> 
-        <div class="column">
-          <img src="images/a7.jpg" style="width:24%">
-          <img src="images/a8.jpg" style="width:24%">
-          <img src="images/a5.jpg" style="width:24%">
-          <img src="images/a6.jpg" style="width:24%">
+          <img src="images/a8.jpg" style="width:15%">
+          <h1>girl</h1>
+          <p>girl skateboards eric koston pro model</p>
+          <div class="column">
+                <img src="images/a5.jpg" style="width:15%">
+                <h1>girl</h1>
+                <p>girl skateboards eric koston pro model</p>
+                <img src="images/a6.jpg" style="width:150%">
+                <h1>girl</h1>
+                <p>girl skateboards eric koston prol</p>
+          </div>
         </div>
-      </div>
-      
-      <script>
-      function one() {
-          for (i = 0; i < elements.length; i++) {elements[i].style.msFlex = "100%"; elements[i].style.flex = "100%"; }
- 
-      function two() {
-        for (i = 0; i < elements.length; i++) { elements[i].style.msFlex = "50%"; elements[i].style.flex = "50%"; }
-      
-      function four() {
-        for (i = 0; i < elements.length; i++) { elements[i].style.msFlex = "25%"; elements[i].style.flex = "25%"; }
 </body>
 </html>
