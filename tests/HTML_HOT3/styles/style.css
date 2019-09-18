@@ -1,0 +1,12 @@
+#wrapper {margin: auto;max-width: 80%;padding: 10px;}
+* {box-sizing: border-box;}
+#aside1 {  float: left; max-width: 30%; padding:10px; border:solid black;min-width:33.3% }
+#aside2  {float:left;max-width: 30%; padding: 10px; border:solid black;min-width:33.3%}
+#main {float:left; max-width: 30%;border: solid black; min-width:33.3%}
+#footer {clear:both; border: solid black}
+body {background-image: url("/images/repeater.jpg")}
+li {display: inline;margin:auto;padding:10px; font-size: 2em;}
+#header {border: solid black; font-size:3.5em}
+#nav {border: solid black}
+a {color:black}
+section {background-image: url("/images/spotlight.jpg");min-height:300px}
