@@ -1,0 +1,9 @@
+#nav_menu ul {list-style-type: none; padding: 1em 2em; text-align: center; border: 2px solid black}
+#nav_menu ul li {display:inline;padding-left:8em}
+#nav_menu ul li a {font-weight:bold;color:rgb(185, 14, 148)}
+#nav_menu ul li a.current {text-decoration: none}
+#nav_menu2 ul {list-style-type:none;}
+#nav_menu2 ul li {float:left}
+#nav_menu2 ul li a {text-align:center; display: block; width:180px; padding: 1em 5.3em; text-decoration:none; 
+    background-color: red; color:white; font-weight: bold; border-right: 4px solid lightgray }
+#nav_menu2 ul li a.class { background-color: rgb(110, 19, 19); }
