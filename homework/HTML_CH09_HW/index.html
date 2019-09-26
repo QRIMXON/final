@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        nav {display: flex;
+        flex-wrap:wrap;
+        font-size:40px;
+        justify-content:center;
+        justify-content:space-between
+        }
+        a {text-decoration:none; color:black;padding-left:50px;padding-right:50px; background-color:red;}
+        li {display:inline}
+        @media screen and (max-width:600px){
+            nav{ flex-direction: column}
+        }
+    </style>
+</head>
+<body>
+    <nav>
+            <div style="text-align:center;" id="nav"><a href="#">home</a></div>
+            <div style="text-align:center;" id="nav"><a href="#">contact</a></div>
+            <div style="text-align:center;" id="nav"><a href="#">about</a></div>
+            <div style="text-align:center;" id="nav"><a href="#">reviews</a></div>
+            <div style="text-align:center;" id="nav"><a href="#">other</a></div>
+            <div style="text-align:center;" id="nav"><a href="#">store</a></div>
+    </nav>
+</body>
+</html>
