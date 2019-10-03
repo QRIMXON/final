@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid black;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(odd) {
+        background-color: yellow;
+      }
+      .tfoot {text-align:right;}
+      </style>
+</head>
+<body>
+    <table>
+        <tr>
+          <th>Department</th>
+          <th>Name</th>
+          <th>E-Mail</th>
+          <th>Years of Service</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Editorial</td>
+          <td>Joel Murach</td>
+          <td>joelmurach@yahoo.com</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>Anne Boehem</td>
+          <td>ann@murach.com</td>
+          <td>34</td>
+        </tr>
+        <tr>
+          <td>Zach Ruvblaca</td>
+          <td>zach@murach.com</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="background-color:white">Marketing</td>
+          <td>Judy Taylor</td>
+          <td>judy@murach.com</td>
+          <td>39</td>
+        </tr>
+        <tr>
+          <td>Cindy Vasquev</td>
+          <td>cindy@murach.com</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="background-color:white">Customer Service</td>
+          <td>Kelly Slikov</td>
+          <td>kelly@murach.com</td>
+          <td>25</td>
+        </tr>
+        <tr>
+            <td>Juliette Baylon</td>
+            <td>juliette@murach.com</td>
+            <td>1</td>
+          </tr>
+          <tfoot>
+            <tr>
+              <td colspan="3" class="tfoot"><b>Total Years</b></td>
+              <td class="tfoot"><b>105</b></td>
+            </tr>
+          </tfoot>
+      </table>
+</body>
+</html>
