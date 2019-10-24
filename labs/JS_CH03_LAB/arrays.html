@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+<script>
+    
+        var names = new Array (5);
+
+        for(var i=0;i<names.length;i++)
+        {
+                    names[i] = prompt("Please enter a name")
+        }
+
+        alert("thanks");
+
+
+        for(var i=0;i<names.length;i++)
+        {
+            document.getElementById('result').innerHTML += names[i];
+            document.getElementById('result').innerHTML += "<br>";
+        } 
+</script>
+</body>
+</html>
