@@ -5,14 +5,21 @@
     <title>Future Value Application</title>
     <script>
 		var futureValue;
-		
+		var monthlyFutureValue;
+
 		// get user entries
 		var investment = prompt("Enter investment amount as xxxxx.xx", 10000);
 		investment = parseFloat(investment);
+
+
 		var rate = prompt("Enter interest rate as xx.x", 7.5);
 		rate = parseFloat(rate);
+		var monthlyRate = rate / 12;
+
+
 		var years = prompt("Enter number of years", 10);
 		years = parseInt(years);
+		var months = years * 12;
 		
 		// calulate future value
 		futureValue = investment;
@@ -20,6 +27,13 @@
 			futureValue = futureValue + (futureValue * rate / 100);
 		}
 		futureValue = parseInt(futureValue);
+
+		monthlyFutureValue = investment;
+		for (var i = 1; i <= months; i++) {
+			monthlyFutureValue = monthlyFutureValue + (monthlyFutureValue * monthlyRate / 100);
+
+		}
+		monthlyFutureValue = parseInt(monthlyFutureValue);
     </script>
 </head>
 <body>
@@ -29,6 +43,11 @@
 			document.write(" Interest rate = " + rate);
 			document.write(" Years = " + years);
 			document.write(" Future Value is " + futureValue + "<br><br>");
+
+			document.write ("Investment Amount = " + investment);
+			document.write ("interest rate = " + rate);
+			document.write ("months = " + months);
+			document.write (" monthly future value is " + monthlyFutureValue + "<br><br>")
         </script>
         Thanks for using the Future Value application.
     </main>
