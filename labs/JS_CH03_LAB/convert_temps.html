@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Convert from Fahrenheit to Centigrade</title>
+    <script>
+        //Data Input
+        //alert ('Does this work?');
+        //var userInput = parseFloat(prompt("Enter Fahrenheit Temperature"));
+
+
+        //Do Math
+        //var celsius = (userInput - 32) * 5/9;
+
+        //Data Output
+        //alert("Fahrenheit tempersture is " + userInput + 
+        // "\n\nCelsius temperature is " + celsius.toFixed(3));
+        function convertToCelsius() {
+            //Data Input
+
+            var userInput = parseFloat(document.getElementById('txtFahrenheit').value);
+
+            if (userInput < -110 || userInput > 212) {
+                //do this
+                alert("Your entered " + userInput +
+                    "\n\n Entry must range from -100 to +212");
+                    document.getElementById("result").innerHTML = "";
+            } else {
+                //Do Math
+                var celsius = (userInput - 32) * 5 / 9;
+
+                //Data Output
+                document.getElementById('result').innerHTML =
+                    "Fahrenheit temperature is " + userInput +
+                    "<br><br>Celsius temperature is " + celsius.toFixed(2);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <h1>Thanks for using the temperature converter</h1>
+        <form>
+            <label>Enter Fahrenheit Temperature
+                <input type="text" id="txtFahrenheit">
+            </label>
+            <br>
+            <input type="button" value="Submit" onclick="convertToCelsius()">
+        </form>
+        <p id="result"></p>
+    </main>
+</body>
+
+</html>
