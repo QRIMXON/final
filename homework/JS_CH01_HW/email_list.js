@@ -24,7 +24,7 @@ var joinList = function() {
 	} else { $("first_name_error").firstChild.nodeValue = ""; }  
 	
 	if (isValid) {
-		$("email_form").submitt(); 
+		$("email_form").submit(); 
 	}
 };
 

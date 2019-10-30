@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+
+    <br>
+    <input type="button" value="1" onClick="append(1)">
+    <input type="button" value="2" onClick="append(2)">
+    <input type="button" value="3" onClick="append(3)">
+    <input type="button" value="4" onClick="append(4)">
+    <br>
+    <input type="button" value="5" onClick="append(5)">
+    <input type="button" value="6" onClick="append(6)">
+    <input type="button" value="7" onClick="append(7)">
+    <input type="button" value="8" onClick="append(8)">
+    <br>
+    <input type="button" value="9" onClick="append(9)">
+    <input type="button" value="0" onClick="append(0)">
+
+
+    <input type="button" value="+" onClick="append('+')">
+    <input type="button" value="-" onClick="append('-')">
+    <br>
+    <input type="button" value="*" onClick="append('*')">
+    <input type="button" value="/" onClick="append('/')">
+    <input type="button" value="=" onClick="doMath()">
+
+
+    <script>
+        function doMath() {
+            txt.value = eval(document.getElementById("txt").value);
+        }
+
+        function append(data) {
+            console.log(data);
+            document.getElementById("txt").value += data;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="pprice" id="pprice">
+    <button value="Submit" onclick="calcShipping()">Shipping</button>
+
+<p id="result"></p>
+
+    <script>
+ 
+    function calcShipping(){
+        var pprice = parseFloat(document.getElementById('pprice').value)
+    if(pprice < 25){
+       var total = pprice + 1.50;
+    }
+    else{
+           total = pprice + (pprice * .1);
+
+    }
+    document.getElementById("result").innerHTML = total; }
+
+
+    </script>
+</body>
+</html>

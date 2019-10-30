@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-    
-    <input type="text" name="one" value="0"><br>
-    <input type="text" name="two" value="0"><br>
-    <input type="text" name="three" value="0"><br>
-    <input type="text" name="four" value="0"><br>
-    <input type="text" name="five" value="0">
-    <input type="button" value="calcAvg">
 
+<body>
+
+    <input type="text" name="one" id="one" value="0"><br>
+    <input type="text" name="two" id="two" value="0"><br>
+    <input type="text" name="three" id="three" value="0"><br>
+    <input type="text" name="four" id="four" value="0"><br>
+    <input type="text" name="five" id="five" value="0">
+    <button value="Submit" onclick="calcAvg()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calcAvg() {
+            var userInput1 = parseFloat(document.getElementById('one').value);
+            var userInput2 = parseFloat(document.getElementById('two').value);
+            var userInput3 = parseFloat(document.getElementById('three').value);
+            var userInput4 = parseFloat(document.getElementById('four').value);
+            var userInput5 = parseFloat(document.getElementById('five').value);
+
+            var sum = userInput1 + userInput2 + userInput3 + userInput4 + userInput5;
+            var average = sum / 5;
+
+        
+        document.getElementById("result").innerHTML = average;
+        }
+    </script>
 </body>
+
 </html>

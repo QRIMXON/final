@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   lbs <input type="text" id="lbs">
+   inches <input type="text" id="inch">
+   bmi <input type="text" id="bmi">
+<button value="submit" onClick="calcBMI()">Calculate BMI</button>
+
+
+
+   <script>
+   function calcBMI() {
+    var lbs = parseFloat(document.getElementById('lbs').value);
+    var inch = parseFloat(document.getElementById('inch').value);
+
+    var bmi = lbs * 703 / (inch * inch);
+
+    document.getElementById("bmi").value = bmi ;
+   }
+   </script>
+
+</body>
+</html>
