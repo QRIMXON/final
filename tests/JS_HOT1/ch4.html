@@ -7,12 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+       
     <p id="result"></p>
     <script>
-        var favoriteMovie = ["HP1", "HP2", "HP3"]
-    for(var i = 15;i<=90;i+=15){
-        document.getElementById('result').innerHTML += i;
-            document.getElementById('result').innerHTML += "<br>"
+    var count = 1;
+   
+    while(count <= 100)
+    {
+        document.getElementById('result').innerHTML += count;
+        count = count + 2
+        
     }
     </script>
 </body>
