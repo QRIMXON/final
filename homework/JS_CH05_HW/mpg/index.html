@@ -23,7 +23,7 @@
             } else if (miles <= 0 || gallons <= 0) {
             	alert("Both entries must be greater than zero");
             } else {
-                $("mpg").value = calculateMPG(miles, gallons);
+                $("mpg").value = calculateMpg(miles, gallons);
                 $("miles").focus();
             }
         };
@@ -42,7 +42,7 @@
         <label for="mpg">Miles Per Gallon</label>
         <input type="text" id="mpg" disabled><br>
         <label>&nbsp;</label>
-        <input type="button" id="calculate" value="Calculate MPG"><br>
+        <input type="button" id="calculate" value="Calculate MPG" onclick="calculateMpg()"><br>
     </main>
 </body>
 </html>
