@@ -11,14 +11,27 @@
         <h1>Calculate Miles Per Gallon</h1>
         <label for="miles">Miles Driven:</label>
 		<input type="text" id="miles"><br>
-        <label for="gallons">Gallons of Gas Used:</label>
+        <label for="gallons">Gallons of Gas Used:</label><p id="error"></p>
         <input type="text" id="gallons"><br>
-        <label for="mpg">Miles Per Gallon</label>
+        <label for="mpg">Miles Per Gallon</label><p id="error"></p>
         <input type="text" id="mpg" disabled><br>
         <label>&nbsp;</label>
         <input type="button" id="calculate" value="Calculate MPG"><br>
         <label>&nbsp;</label>
         <input type="button" id="clear" value="Clear Entries"><br>
+        
+        <script>
+            function myFunction() {
+              var message, a1;
+              message = document.getElementById("error");
+              message.innerHTML = "";
+              x = document.getElementById("demo").value;
+              try { 
+                if(a1 == "")  throw "must be numeric and greater than zero";   
+            }
+            </script>
+            
+        </span>.
     </main>
 </body>
 </html>
