@@ -19,7 +19,7 @@ var showResults = function(){
 	var h2Node = document.createElement("h2");
 	var h2TextValue = document.createTextNode("Results");
 	h2Node.append(h2TextValue);
-	document.body.appendChild(h2Node);
+	document.body.appendChild(h2Node)
 
 	var averageNode = document.createElement("p");
 	var averageTextValue = document.createTextNode("Average Score: " + averageScore);
@@ -36,7 +36,7 @@ var displayResults = function() {
 	$("results");
 	scores.sort(function(a,b){return b-a})
 
-
+	 
 	showResults();
 }
 
