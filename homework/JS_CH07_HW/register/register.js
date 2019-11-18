@@ -15,33 +15,29 @@ var processEntries = function() {
 
     // check user entries for validity
     if (email == "") {
-        $("email_address").nextElementSibling.firstChild.nodeValue = "This field is required.";
+        $("email_address").nextElementSibling.firstChild.nodeValue = ("Email Invalid");
         isValid = false;
     } else {
-        $("email_address").nextElementSibling.firstChild.nodeValue = "";	
+        $("email_address").nextElementSibling.firstChild.nodeValue = ("");	
     }
-    
     if (phone == "") {
-        $("phone").nextElementSibling.firstChild.nodeValue = "This field is required.";
+        $("phone").nextElementSibling.firstChild.nodeValue = ("Phone # Invalid");
         isValid = false;
     } else {
-        $("phone").nextElementSibling.firstChild.nodeValue = "";	
+        $("phone").nextElementSibling.firstChild.nodeValue = ("");	
     }
-    
     if (country == "") {
-        $("country").nextElementSibling.firstChild.nodeValue = "Please select a country.";
+        $("country").nextElementSibling.firstChild.nodeValue = ("Country is Invalid");
         isValid = false;
     } else {
-        $("country").nextElementSibling.firstChild.nodeValue = "";	
+        $("country").nextElementSibling.firstChild.nodeValue = ("");	
     }
-    
     if (terms == false) {
-        $("terms").nextElementSibling.firstChild.nodeValue = "This box must be checked.";
+        $("terms").nextElementSibling.firstChild.nodeValue = ("Must Be Checked");
         isValid = false;
     } else {
-        $("terms").nextElementSibling.firstChild.nodeValue = "";	
+        $("terms").nextElementSibling.firstChild.nodeValue = ("");	
     }
-    
     if (isValid == true) {
         $("registration_form").submit();
     }
