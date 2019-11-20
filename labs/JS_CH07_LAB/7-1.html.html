@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script language="javascript">
+        function MouseRollover(MyImage) {
+                MyImage.src = "MyPicture2.jpg";
+        }
+        function MouseOut(MyImage) {
+                MyImage.src = "MyPicture1.jpg";
+        }
+        function MouseIn(MyImage) {
+            MyImage.src = "MyPicture3.jpg";
+        }
+        function Mouse6(MyImage) {
+            MyImage.src = "MyPicture4.jpg"
+        }
+        
+    </script>
+</head>
+<body>
+
+    
+   
+    
+   
+    <img src="MyPicture4.jpg" boarder="0px" width="650px" height="550px" 
+    onMouseOver= "MouseIn(this)"
+    onMouseOut="Mouse6(this)" />
+
+    <img src="MyPicture1.jpg" boarder="0px" width="650px" height="550px" 
+    onMouseOver="MouseRollover(this)" 
+    onMouseOut="MouseOut(this)" />
+   
+</body>
+</html>

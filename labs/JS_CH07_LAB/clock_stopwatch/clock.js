@@ -67,13 +67,14 @@ var stopStopwatch = function(evt) {
 };
 
 var resetStopwatch = function(evt) {
-    // prevent default action of link
+    preventDefault();
         
     // stop timer
         
     // reset elapsed variables and clear stopwatch display
     
 };
+
 
 window.onload = function() {
     // set initial clock display and then set interval timer to display

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+  
+</head>
+<body>
+    <script>
+        var imgNumber = 0;
+        var path = ["MyPicture1.jpg","MyPicture2.jpg","MyPicture3.jpg","MyPicture4.jpg",];
+        var numberOfImg = path.length;
+        var timer = null;
+        
+        function slide() {
+          imgNumber = (imgNumber + 1) % path.length;
+          console.log(imgNumber);
+          document.getElementById("imgSlideshow").src = path[imgNumber];
+          changeCounter(imgNumber + 1, numberOfImg);
+        }
+        
+        function setTimer() {
+          if (timer) {
+            clearInterval(timer);
+            timer = null;
+          } else {
+            timer = setInterval(slide, 2000);
+          }
+          return false;
+        }
+        function changeCounter(cur, total) {
+  document.getElementById("counter").innerHTML = cur + "/" + total;
+}
+document.getElementById("counter").innerHTML = 1 + "/" + path.length
+        </script>
+
+<div id="slideshow">
+        <div>
+          <img name="slide" id="imgSlideshow" src="MyPicture1.jpg">
+        </div>
+      </div>
+      <div id="button">
+        
+        <a href="#" id="startCycle" onclick="return setTimer()">Play/Pause</a>
+        
+      </div>
+      <div id="counter"></div>
+
+
+</body>
+</html>
