@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var $ = function(id){
+            return document.getElementById(id);
+        }
+
+
+        function fValue(){
+    var invest = parseInt($("invest").value);
+    var annual = parseInt($("annual").value * invest / 10);
+    var years = parseInt($("years").value);
+    var intTotal = annual * years;
+    $("future").value = invest + intTotal;
+        }
+        
+        </script>
+</head>
+<body>
+    <h2>Future Value Calculator</h2>
+    <p>Total Investment</p><input type="text" id="invest">
+    <p>Annual Interest Rate</p><input type="text" id="annual">
+    <p>Number of Years</p><input type="text" id="years">
+    <p>Future Value</p><input type="text" id="future">
+    <button type="submit" id="button" onclick="fValue()">calculate</button>
+
+   
+
+</body>
+</html>

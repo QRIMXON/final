@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+      var $ = function(id) {
+            return document.getElementById(id);
+        };
+    	window.onload = function() {
+           $("txtbox").value = "100" ;}
+
+           var clearEntries = function() {
+               $("txtbox2").value = "";
+               $("txtbox3").value = "";
+               $("txtbox4").value = "";
+           }
+           var clearTxt3 = function() {
+               $("txtbox3").value = "";
+           }
+           var enterTxt4 = function() {
+               $("txtbox4").value = "I'm a durdy dawg!";
+           }
+           var link1 = function() {
+               $("link1").value = "link3";
+           }
+           function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+function displayDate2() {
+  document.getElementById("demo").innerHTML = "sucka fool!";
+}
+function displayDate3() {
+    document.getElementById("demo2").innerHTML = "this was kinda dumb forreal"
+}
+
+    
+    </script>
+</head>
+<body>
+    
+<h3>text box boy!</h3>
+    <input type="text" id="txtbox">
+    <button type="submit" id="btn" onclick="clearEntries()">submit</button>
+    <input onchange="clearEntries()" type="text" id="txtbox2" value="sup">
+    <input type="text" id="txtbox3" value="durdy">
+    <input type="text" id="txtbox4" value="what it do?">
+    <a onfocus="displayDate()" href="" id="link1">link1</a>
+    <a onblur="displayDate2()" href="" id="link2">link2</a>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <input onclick="displayDate3()" type="text" id="txt3">
+    <input ondblclick="displayDate2()" type="text" id="txt4">
+    <input onmouseover="displayDate3()" type="text" id="txt5">
+    <input onmouseout="displayDate2()" type="text" id="txt6">
+    <input onmousemove="displayDate3()" type="text" id="txt7">
+
+    
+          <button type="submit" id="btn" onclick="displayDate3()">submit</button>
+          <textarea onselect="displayDate3()" id="txtarea" rows="4" cols="50">
+                At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+                </textarea>
+</body>
+</html>

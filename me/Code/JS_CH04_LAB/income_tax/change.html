@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Change Calculator</h2>
+    
+    <input type="text" id="enterChange"><button onclick="Calculate()" type="submit" id="button">Calculate</button>
+    <br>
+    <p>Quarters:</p><input type="text" id="quarters">
+    <p>Dimes:</p><input type="text" id="dimes">
+    <p>Nickles:</p><input type="text" id="nickles">
+    <p>Pennies:</p><input type="text" id="pennies">
+
+
+
+    <script>
+        var change = $("enterChange").value;
+        function Calculate(){
+    if(change >= 25){
+numQuarters = parseInt(change / 25);
+change = change % 25;
+    }
+    if(change >= 10){
+        numDimes = parseInt(change / 10);
+        change = change % 10;
+    }
+    if(change >= 5){
+        numNickles = parseInt(change / 5);
+        change = change % 5;
+    }
+    if(change >= 1){
+        numPennies = parseInt(change / 1)
+        change = change % 1;
+    }
+    $("quarters").value = numQuarters;
+    $("dimes").value = numDimes;
+    $("nickles").value = numNickles;
+    $("pennies").value = numPennies;
+}
+    
+    
+
+
+
+
+
+    </script>
+
+</body>
+</html>

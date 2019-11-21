@@ -1,0 +1,7 @@
+.card, .form-control { border-radius: 0; color:purple }
+.btn {color:red;background-color:black}
+.nav-link {color:green}
+a:hover {color:black}
+.btn:hover{background-color:white;color:black}
+p {color:red}
+h1,h2,h3,h4,h5,h6 {color:rgb(173, 88, 105)}

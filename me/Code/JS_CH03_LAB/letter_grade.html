@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Show letter grade</title>
+	<script>
+		do{
+		var numberGrade = prompt("Enter number grade from 0 through 100" +
+		"\nOR enter 999 to end entries");
+		}while(numberGrade < 0 || numberGrade > 100 && numberGrade != 999);
+
+		while(numberGrade != 999) {
+		if(numberGrade > 87)
+		{
+			alert("Number Grade: " + numberGrade +
+			"\nLetter Grade A");
+		}
+		else if(numberGrade > 79)
+		{
+			alert("Number Grade: " + numberGrade +
+			"\nLetter Grade B");
+		}
+		else if(numberGrade > 67)
+		{
+			alert("Number Grade: " + numberGrade +
+			"\nLetter Grade C");
+		}
+		else if(numberGrade > 59)
+		{
+			alert("Number Grade: " + numberGrade +
+			"\nLetter Grade D");
+		}
+		else 
+		{
+			alert("Number Grade: " + numberGrade +
+			"\nLetter Grade F");
+		}
+		do{
+		numberGrade = prompt("Enter number grade from 0 through 100" +
+		"\nOR enter 999 to end entries");
+		} while (numberGrade < 0 || numberGrade > 100 && numberGrade != 999);
+		
+	}
+	</script>
+</head>
+<body>
+	<main>
+    	<h1>This page is displayed after the JavaScript is executed</h1>
+	</main>
+</body>
+</html>
