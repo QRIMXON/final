@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="headings">
+<h1 id="h1">G-Crypto</h1>
+<h2 id="h2">A Crypto Consultant that YOU CAN TRUST!</h2>
+</div>
+<div id="errorAll" class="text-danger"></div>
+<div id="radio">
+        <form action="cryptoSale.php" method="POST" class="form" name="checkForm">
+    <fieldset class="form-group">
+    <legend>What would you like to buy today? *</legend>
+            <input type="radio" name="radio" id="radio1" value="bitcoin" class="custom-radio">
+            <label for="bitcoin">Bitcoin</label>
+            <input type="radio" name="radio" id="radio" value="ethereum" class="custom-radio">
+            <label for="ethereum">Ethereum</label><br>
+            
+            <div id="errorRadio" class="text-danger">Please select Hardware Wallet and/or Web Wallet.</div>
+    
+<br>
+<br>
+<legend>Which wallet(s) would you like to use? *</legend>
+  <input type="checkbox" name="Hardware Wallet" value="Hardware Wallet" class="custom-checkbox">Hardware Wallet
+    <input type="checkbox" name="Web Wallet" value="Web Wallet" class="custom-checkbox">Web Wallet
+    <div id="errorCheck" class="text-danger">Please select Hardware Wallet and/or Web Wallet.</div>
+    </fieldset>
+    </div>
+  </form>
+  <br>
+  <br>
+<form action="cryptoSale.php" method="POST" class="form" name="customerForm">
+        <fieldset class="form-group"> 
+                <legend>Customer Information</legend>
+                First Name * <input type="text" class="form-control"><br>
+                Last Name * <input type="text" class="form-control"><br>
+                Street Address * <input type="text" class="form-control"><br>
+                Zip Code * <input type="text" class="form-control"><br>
+                Email * <input type="text" class="form-control"><br>
+                Confirm Email * <input type="text" class="form-control"><br>
+                Phone Number * <input type="text" class="form-control">
+                <div id="errorCustomer" class="text-danger">Please complete all customer information</div>
+            </fieldset>
+        </form>
+        <br>
+        <form action="cryptoSale.php" method="POST" name="billingForm">
+                <fieldset class="form-group"> 
+                <legend>Billing Information</legend>
+                <input type="checkbox" name="billingBox" value="billingBox">Same as above<br>
+                First Name * <input type="text" class="form-control"><br>
+                Last Name * <input type="text" class="form-control"><br>
+                Street Address * <input type="text" class="form-control"><br>
+                Zip Code * <input type="text" class="form-control"><br>
+                Phone Number * <input type="text" class="form-control">
+                <div id="errorBilling" class="text-danger">Please complete all billing information</div>
+                <br>
+                <a href="" onclick="processEntries()">submit</a>
+               </fieldset>
+               
+</form>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+</body>
+
+
+</html>

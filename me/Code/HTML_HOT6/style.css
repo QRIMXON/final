@@ -1,0 +1,36 @@
+.nav ul {display: flex; justify-content:space-evenly;border: solid black ; font-size: 1em;list-style-type: none}
+body { 
+    background: lightblue url("background.jpg"); 
+  }
+  .footer {
+    margin-top: 2rem;
+    background: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+  }
+  .responsive {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  .aside{display: flex}
+  
+  .nav ul li a {
+      color:black
+  }
+  .nav ul li a:hover
+{
+background-color: rgb(240, 235, 235);
+}
+.nav ul li a:visited{
+    color:black
+}
+h1, h2 {
+    font-family: 'Archivo Narrow', sans-serif;
+    text-decoration: underline;
+}
+.wrapper{
+    width:100%
+}
+
