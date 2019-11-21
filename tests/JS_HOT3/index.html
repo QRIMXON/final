@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <div id="wrapper">
@@ -23,14 +25,14 @@
             <input type="radio" name="radio" id="radio" value="ethereum" class="custom-radio">
             <label for="ethereum">Ethereum</label><br>
             
-            <p id="errorRadio" class="text-danger"></p>
+            <div id="errorRadio" class="text-danger">Please select Hardware Wallet and/or Web Wallet.</div>
     
 <br>
 <br>
 <legend>Which wallet(s) would you like to use? *</legend>
   <input type="checkbox" name="Hardware Wallet" value="Hardware Wallet" class="custom-checkbox">Hardware Wallet
     <input type="checkbox" name="Web Wallet" value="Web Wallet" class="custom-checkbox">Web Wallet
-    <div id="errorCheck" class="text-danger"></div>Please select Hardware Wallet and/or Web Wallet.
+    <div id="errorCheck" class="text-danger">Please select Hardware Wallet and/or Web Wallet.</div>
     </fieldset>
     </div>
   </form>
@@ -46,7 +48,7 @@
                 Email * <input type="text" class="form-control"><br>
                 Confirm Email * <input type="text" class="form-control"><br>
                 Phone Number * <input type="text" class="form-control">
-                <div id="errorCustomer" class="text-danger"></div>Please complete all customer information
+                <div id="errorCustomer" class="text-danger">Please complete all customer information</div>
             </fieldset>
         </form>
         <br>
@@ -59,32 +61,18 @@
                 Street Address * <input type="text" class="form-control"><br>
                 Zip Code * <input type="text" class="form-control"><br>
                 Phone Number * <input type="text" class="form-control">
-                <div id="errorBilling" class="text-danger"></div>Please complete all billing information
+                <div id="errorBilling" class="text-danger">Please complete all billing information</div>
                 <br>
-                <button type="submit" value="submit">Submit</button>
+                <a href="" onclick="processEntries()">submit</a>
                </fieldset>
                
 </form>
 
     </div>
-
- 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-    </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script>
-        var $ = function(id){
-  return document.getElementById(id);
-};
-
-function validateRadio() {
-if (document.getElementById("radio1").checked) {  document.getElementById("errorRadio").innerHTML = ""}
-else {
-document.getElementById("errorRadio").innerHTML = "Error"
-}
-}</script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
 </body>
 
 
