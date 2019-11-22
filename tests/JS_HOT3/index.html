@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
     <div id="wrapper">
@@ -15,65 +16,222 @@
 <h1 id="h1">G-Crypto</h1>
 <h2 id="h2">A Crypto Consultant that YOU CAN TRUST!</h2>
 </div>
-<div id="errorAll" class="text-danger"></div>
+<fieldset id="errorAll">
+<div id="errorAll" class="hide">Please fix the indicated problem.</div>
+</fieldset>
 <div id="radio">
         <form action="cryptoSale.php" method="POST" class="form" name="checkForm">
-    <fieldset class="form-group">
+    <fieldset id="Radios" class="form-group">
     <legend>What would you like to buy today? *</legend>
             <input type="radio" name="radio" id="radio1" value="bitcoin" class="custom-radio">
             <label for="bitcoin">Bitcoin</label>
-            <input type="radio" name="radio" id="radio" value="ethereum" class="custom-radio">
+            <input type="radio" name="radio" id="radio2" value="ethereum" class="custom-radio">
             <label for="ethereum">Ethereum</label><br>
             
-            <div id="errorRadio" class="text-danger">Please select Hardware Wallet and/or Web Wallet.</div>
-    
-<br>
+            <div id="errorRadio" class="hide">Please select Bitcoin or Ethereum.</div>
+    </fieldset>
+    <fieldset id="Checks" class="form-group">
 <br>
 <legend>Which wallet(s) would you like to use? *</legend>
-  <input type="checkbox" name="Hardware Wallet" value="Hardware Wallet" class="custom-checkbox">Hardware Wallet
-    <input type="checkbox" name="Web Wallet" value="Web Wallet" class="custom-checkbox">Web Wallet
-    <div id="errorCheck" class="text-danger">Please select Hardware Wallet and/or Web Wallet.</div>
+  <input type="checkbox" name="Hardware Wallet" value="Hardware Wallet" class="custom-checkbox" id="check1">Hardware Wallet
+    <input type="checkbox" name="Web Wallet" value="Web Wallet" class="custom-checkbox" id="check2">Web Wallet
+    <div id="errorCheck" class="hide">Please select Hardware Wallet and/or Web Wallet.</div>
     </fieldset>
     </div>
   </form>
   <br>
   <br>
 <form action="cryptoSale.php" method="POST" class="form" name="customerForm">
-        <fieldset class="form-group"> 
+        <fieldset id="customerInfo" class="form-group"> 
                 <legend>Customer Information</legend>
-                First Name * <input type="text" class="form-control"><br>
-                Last Name * <input type="text" class="form-control"><br>
-                Street Address * <input type="text" class="form-control"><br>
-                Zip Code * <input type="text" class="form-control"><br>
-                Email * <input type="text" class="form-control"><br>
-                Confirm Email * <input type="text" class="form-control"><br>
-                Phone Number * <input type="text" class="form-control">
-                <div id="errorCustomer" class="text-danger">Please complete all customer information</div>
+               <label>First Name * </label> <input id="firstName" type="text" class="form-control"><br>
+               <label>Last Name * </label>  <input id="lastName" type="text" class="form-control"><br>
+               <label>Street Address *</label>   <input id="address" type="text" class="form-control"><br>
+               <label>Zip Code * </label>  <input id="zipCode" type="text" class="form-control"><br>
+               <label>Email * </label>  <input id="email" type="text" class="form-control"><br>
+               <label>Confirm Email *</label>   <input id="confirmEmail" type="text" class="form-control"><br>
+               <label> Phone Number *</label>  <input id="phoneNumber" type="text" class="form-control">
+                <div id="errorCustomer" class="hide">Please complete all customer information</div>
             </fieldset>
         </form>
         <br>
         <form action="cryptoSale.php" method="POST" name="billingForm">
-                <fieldset class="form-group"> 
+                <fieldset id="customerBilling" class="form-group"> 
                 <legend>Billing Information</legend>
                 <input type="checkbox" name="billingBox" value="billingBox">Same as above<br>
-                First Name * <input type="text" class="form-control"><br>
-                Last Name * <input type="text" class="form-control"><br>
-                Street Address * <input type="text" class="form-control"><br>
-                Zip Code * <input type="text" class="form-control"><br>
-                Phone Number * <input type="text" class="form-control">
-                <div id="errorBilling" class="text-danger">Please complete all billing information</div>
+                <label>First Name * </label>  <input id="firstName2" type="text" class="form-control"><br>
+                <label>Last Name * </label> <input id="lastName2" type="text" class="form-control"><br>
+                <label>Street Address *</label> <input id="address2" type="text" class="form-control"><br>
+                <label>Zip Code * </label> <input id="zipCode2" type="text" class="form-control"><br>
+                <label> Phone Number *</label> <input id="phoneNumber2" type="text" class="form-control">
+                <div id="errorBilling" class="hide">Please complete all billing information</div>
                 <br>
-                <a href="" onclick="processEntries()">submit</a>
-               </fieldset>
+                </fieldset>
+                <fieldset class="form-group">
+                        <button type="submit" id="btn" class="btn btn-primary btn-lg">Submit</button>
+                    </fieldset>
                
 </form>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="myjava.js"></script>
 </body>
 
 
 </html>
+
+
+
+
+<!-- <form class="container" method="post" action="cryptoSale.php">
+
+        <fieldset id="Q0">
+            <div class="text-center hide">Please fix the indicated problems and then resubmit your
+                order.</div>
+
+        </fieldset>
+
+
+        
+        <fieldset id="Q1">
+            <legend>What would you like today?<span style="font-size: 2em;">*</span></legend>
+            <div class="form-check">
+                <input class="form-check-input custom-radio" type="radio" name="coin" id="coin1" value="option1">
+                <label class="form-check-label" for="coin1">
+                    Bitcoin
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input custom-radio" type="radio" name="coin" id="coin2" value="option2">
+                <label class="form-check-label" for="coin2">
+                    Ethereum
+                </label>
+            </div>
+            <div class="hide">Please select either Bitcoin or Ethereum</div>
+        </fieldset>
+
+
+        <fieldset id="Q2">
+            <legend>What wallet(s) do you want to use?<span style="font-size: 2em;">*</span></legend>
+            <div class="form-check">
+                <input class="form-check-input custom-checkbox" type="checkbox" name="wallet" id="wallet1"
+                    value="option1">
+                <label class="form-check-label" for="wallet1">
+                    Hardware Wallet
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input custom-checkbox" type="checkbox" name="wallet" id="wallet2"
+                    value="option2">
+                <label class="form-check-label" for="wallet2">
+                    Web Wallet
+                </label>
+            </div>
+            <div class="hide">Please select either Hardware or Web wallet</div>
+        </fieldset>
+
+
+        <fieldset id="Q3" class="mt-5">
+            <legend class="display-4">Customer Information</span></legend>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputfName">First Name<span style="font-size: 2em;">*</span></label>
+                    <input type="text" class="form-control" id="inputfName" placeholder="First Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputlName4">Last Name<span style="font-size: 2em;">*</span></label>
+                    <input type="text" class="form-control" id="inputlName" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Email<span style="font-size: 2em;">*</span></label>
+                <input type="text" class="form-control" id="inputEmail" placeholder="example@email.com">
+            </div>
+            <div class="form-group">
+                <label for="inputEmailConfirm">Confirm Email<span style="font-size: 2em;">*</span></label>
+                <input type="text" class="form-control" id="inputEmailConfirm" placeholder="example@email.com">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Street Address<span style="font-size: 2em;">*</span></label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+                <label for="inputPhone">Phone<span style="font-size: 2em;">*</span></label>
+                <input type="text" class="form-control" id="inputPhone" placeholder="111 111-1111">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="inputZIP">ZIP<span style="font-size: 2em;">*</span></label>
+                    <input type="text" class="form-control" id="inputZIP">
+                </div>
+            </div>
+            <div class="hide">Please Complete all Customer information.</div>
+        </fieldset>
+
+        <fieldset id="Q4" class="mt-5">
+            <legend class="display-4">Billing Information</span></legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="sab" id="sabCheck" value="option2">
+                <label class="form-check-label" for="sabCheck">
+                    Same as Above
+                </label>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputfName">First Name<span style="font-size: 2em;">*</span></label>
+                    <input type="text" class="form-control" id="inputfName2" placeholder="First Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputlName4">Last Name<span style="font-size: 2em;">*</span></label>
+                    <input type="text" class="form-control" id="inputlName2" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Street Address<span style="font-size: 2em;">*</span></label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+                <label for="inputPhone">Phone<span style="font-size: 2em;">*</span></label>
+                <input type="text" class="form-control" id="inputPhone2" placeholder="111 111-1111">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="inputZIP">ZIP<span style="font-size: 2em;">*</span></label>
+                    <input type="text" class="form-control" id="inputZIP2">
+                </div>
+            </div>
+            <div class="hide">Please Complete all Customer information.</div>
+        </fieldset>
+
+        <fieldset class="mt-5 text-center">
+            <button type="submit" id="btn" class="btn btn-primary btn-lg">Submit</button>
+        </fieldset>
+    </form>
+    
+
+    <footer class="mt-5"></footer>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+   
+</body>
+
+</html>-->
+    
+
+    
+   

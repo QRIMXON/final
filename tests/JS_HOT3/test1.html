@@ -30,7 +30,7 @@
 
 <body>
 
-    <!--Jumbotron-->
+ 
     <header>
         <div class="jumbotron jumbotron-fluid bg-danger">
             <div class="container text-center">
@@ -39,30 +39,27 @@
             </div>
         </div>
     </header>
-    <!--Jumbotron End-->
-
-    <!--Form-->
+    
     <form class="container" method="post" action="cryptoSale.php">
 
-        <fieldset id="Q0">
+        <fieldset id="errorAll">
             <div class="text-center hide">Please fix the indicated problems and then resubmit your
                 order.</div>
 
         </fieldset>
 
 
-        <!--Question 1-->
-        <fieldset id="Q1">
+        <fieldset id="Radios">
             <legend>What would you like today?<span style="font-size: 2em;">*</span></legend>
             <div class="form-check">
-                <input class="form-check-input custom-radio" type="radio" name="coin" id="coin1" value="option1">
-                <label class="form-check-label" for="coin1">
+                <input class="form-check-input custom-radio" type="radio" id="radio1" value="radio1">
+                <label class="form-check-label" for="radio1">
                     Bitcoin
                 </label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input custom-radio" type="radio" name="coin" id="coin2" value="option2">
-                <label class="form-check-label" for="coin2">
+            <div class="Checks">
+                <input class="form-check-input custom-radio" type="radio"  id="radio2" value="radio2">
+                <label class="form-check-label" for="radio2">
                     Ethereum
                 </label>
             </div>
@@ -70,20 +67,20 @@
         </fieldset>
 
 
-        <!--Question 2-->
-        <fieldset id="Q2">
-            <legend>What wallet(s) do you want to use?<span style="font-size: 2em;">*</span></legend>
+        
+        <fieldset id="Checks">
+            <legend>What wallet(s) do you want to use?<span>*</span></legend>
             <div class="form-check">
-                <input class="form-check-input custom-checkbox" type="checkbox" name="wallet" id="wallet1"
-                    value="option1">
+                <input class="form-check-input custom-checkbox" type="checkbox" id="check1"
+                    value="check1">
                 <label class="form-check-label" for="wallet1">
                     Hardware Wallet
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input custom-checkbox" type="checkbox" name="wallet" id="wallet2"
-                    value="option2">
-                <label class="form-check-label" for="wallet2">
+                <input class="form-check-input custom-checkbox" type="checkbox"id="check2"
+                    value="check2">
+                <label class="form-check-label" for="check2">
                     Web Wallet
                 </label>
             </div>
@@ -164,15 +161,15 @@
         </fieldset>
 
         <fieldset class="mt-5 text-center">
-            <button type="submit" id="btn" class="btn btn-primary btn-lg">Buy</button>
+            <button type="submit" id="btn" class="btn btn-primary btn-lg">Submit</button>
         </fieldset>
     </form>
-    <!--Form End-->
+    
 
     <footer class="mt-5"></footer>
 
     
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
