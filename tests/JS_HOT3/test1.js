@@ -4,37 +4,21 @@ function $(id) {
   return document.getElementById(id);
 }
 
-function $$(tag) {
-  return document.getElementsByTagName(tag);
-}
-
 var isValid = true;
 
 function validateAll() {
 
-  //Validate Radios
-  //isValid = validRadios();
-  //Validate Checks
-  //isValid = validCheckboxes();
-  //Valid Text Boxes
-  //if($('sabCheck').checked){
-    //copyInfo();
-  //}
-  //isValid = validTextEntriesA();
-  //isValid = validTextEntriesB();
 
-  
-  //Validate Radios
   var isValid1 = validRadios();
-  //Validate Checks
+  
   var isValid2 = validCheckboxes();
-  //Validate Text Boxes
-  if($('sabCheck').checked){
+
+  if($('copyInfoCheck').checked){
     copyInfo();
   }
-  var isValid3 = validTextEntriesA();
-  var isValid4 = validTextEntriesB();
-  //If something doesn't validate, show top error and focus on it
+  var isValid3 = validInfo1();
+  var isValid4 = validInfo2();
+ 
   if(isValid1 && isValid2 && isValid3 && isValid4){
       isValid = true;
   }
@@ -46,82 +30,82 @@ function validateAll() {
 
   if(!isValid){
     eventHandler();
-    $("Q0").lastElementChild.removeAttribute("class", "hide");
-    $("Q0").lastElementChild.setAttribute("class", "show");
-    $("coin1").focus();
+    $("errorAll").lastElementChild.removeAttribute("class", "valid");
+    $("errorAll").lastElementChild.setAttribute("class", "error");
+    $("radio1").focus();
   }
   else{
-    $("Q0").lastElementChild.removeAttribute("class", "show");
-    $("Q0").lastElementChild.setAttribute("class", "hide");
+    $("errorAll").lastElementChild.removeAttribute("class", "error");
+    $("errorAll").lastElementChild.setAttribute("class", "valid");
   }
 }
 
 function validRadios() {
-  if (!$("coin1").checked && !$("coin2").checked) {
-    $("Q1").lastElementChild.removeAttribute("class", "hide");
-    $("Q1").lastElementChild.setAttribute("class", "show");
+  if (!$("radio1").checked && !$("radio2").checked) {
+    $("Radios").lastElementChild.removeAttribute("class", "valid");
+    $("Radios").lastElementChild.setAttribute("class", "error");
     return false;
   } else {
-    $("Q1").lastElementChild.removeAttribute("class", "show");
-    $("Q1").lastElementChild.setAttribute("class", "hide");
+    $("Radios").lastElementChild.removeAttribute("class", "error");
+    $("Radios").lastElementChild.setAttribute("class", "valid");
     return true;
   }
 }
 
 function validCheckboxes() {
-  if (!$("wallet1").checked && !$("wallet2").checked) {
-    $("Q2").lastElementChild.removeAttribute("class", "hide");
-    $("Q2").lastElementChild.setAttribute("class", "show");
+  if (!$("check1").checked && !$("check2").checked) {
+    $("Checks").lastElementChild.removeAttribute("class", "valid");
+    $("Checks").lastElementChild.setAttribute("class", "error");
     return false;
   } else {
-    $("Q2").lastElementChild.removeAttribute("class", "show");
-    $("Q2").lastElementChild.setAttribute("class", "hide");
+    $("Checks").lastElementChild.removeAttribute("class", "error");
+    $("Checks").lastElementChild.setAttribute("class", "valid");
     return true;
   }
 }
 
-function validTextEntriesA() {
+function validInfo1() {
   let txtBoxes = [
-    $("inputfName"),
-    $("inputlName"),
-    $("inputEmail"),
-    $("inputEmailConfirm"),
-    $("inputAddress"),
-    $("inputPhone"),
-    $("inputZIP")
+    $("firstName"),
+    $("lastName"),
+    $("Email"),
+    $("emailConfirm"),
+    $("Address"),
+    $("phoneNumber"),
+    $("Zip")
   ];
 
   for (let index = 0; index < txtBoxes.length; index++) {
     if (txtBoxes[index].value == "") {
-      $("Q3").lastElementChild.removeAttribute("class", "hide");
-      $("Q3").lastElementChild.setAttribute("class", "show");
+      $("customerInfo").lastElementChild.removeAttribute("class", "valid");
+      $("customerInfo").lastElementChild.setAttribute("class", "error");
       return false;
     }
   }
 
-  if($("inputEmail".value != $("inputEmailConfirm").value)){
+  if($("Email".value != $("inputEmailConfirm").value)){
       return false;
   }
   else{
-    $("Q3").lastElementChild.removeAttribute("class", "show");
-    $("Q3").lastElementChild.setAttribute("class", "hide");
+    $("customerInfo").lastElementChild.removeAttribute("class", "error");
+    $("customerInfo").lastElementChild.setAttribute("class", "valid");
       return true;
   }
 }
 
-function validTextEntriesB() {
+function validInfo2() {
     let txtBoxes = [
-      $("inputfName2"),
-      $("inputlName2"),
-      $("inputAddress2"),
-      $("inputPhone2"),
-      $("inputZIP2")
+      $("firstName2"),
+      $("lastName2"),
+      $("Address2"),
+      $("phoneNumber2"),
+      $("Zip2")
     ];
   
     for (let index = 0; index < txtBoxes.length; index++) {
       if (txtBoxes[index].value == "") {
-        $("Q4").lastElementChild.removeAttribute("class", "hide");
-        $("Q4").lastElementChild.setAttribute("class", "show");
+        $("billingInfo").lastElementChild.removeAttribute("class", "valid");
+        $("billingInfo").lastElementChild.setAttribute("class", "error");
         return false;
       }
       else{
@@ -133,38 +117,38 @@ function validTextEntriesB() {
 
 
 function copyInfo(){
-    if($('sabCheck').checked){
-    $("inputfName2").value = $("inputfName").value;
-    $("inputlName2").value = $("inputlName").value;
-    $("inputAddress2").value = $("inputAddress").value;
-    $("inputPhone2").value = $("inputPhone").value;
-    $("inputZIP2").value = $("inputZIP").value; 
+    if($('copyInfoCheck').checked){
+    $("firstName2").value = $("firstName").value;
+    $("lastName2").value = $("lastName").value;
+    $("Address2").value = $("Address").value;
+    $("phoneNumber2").value = $("Phone").value;
+    $("Zip2").value = $("Zip").value; 
     }
     else{
-        $("inputfName2").value = "";
-        $("inputlName2").value = "";
-        $("inputAddress2").value = "";
-        $("inputPhone2").value = "";
-        $("inputZIP2").value = "";
+        $("firstName2").value = "";
+        $("lastName2").value = "";
+        $("Address2").value = "";
+        $("phoneNumber2").value = "";
+        $("Zip2").value = "";
     }
    
 }
 
 function eventHandler(evt) {
-    // The event object sent to the handler or window.event 
+  
         if (!evt) {
-            evt = window.event;        // for IE
+            evt = window.event;        
         }
     
-         // Cancel the default action
+       
          if (evt.preventDefault) {
-             evt.preventDefault();     // for most browsers
+             evt.preventDefault();    
          } 
          else {
-             evt.returnValue = false;  // for IE
+             evt.returnValue = false; 
          }
     };
 window.onload = function() {
   $("btn").onclick = validateAll;
-  $('sabCheck').onchange = copyInfo;
+  $('copyInfoCheck').onchange = copyInfo;
 };
