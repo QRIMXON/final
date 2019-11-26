@@ -2,7 +2,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0 auto;
 	padding: 20px;
-	width: 1200px;
+	width: 900px;
 	border: 3px solid blue;
 }
 	
@@ -20,3 +20,5 @@ ul {
 .hidden {
 	display: none;
 }
+
+title {color: blue;}
