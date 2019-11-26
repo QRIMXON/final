@@ -121,7 +121,7 @@ function copyInfo(){
     $("firstName2").value = $("firstName").value;
     $("lastName2").value = $("lastName").value;
     $("Address2").value = $("Address").value;
-    $("phoneNumber2").value = $("Phone").value;
+    $("phoneNumber2").value = $("phoneNumber").value;
     $("Zip2").value = $("Zip").value; 
     }
     else{
