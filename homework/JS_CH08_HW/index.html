@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Q &amp; A Rollovers</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="rollover.js"></script>
+	<style>
+	h2{ background: url(images/plus.png) no-repeat left center; }
+	h2.minus {background: url(images/minus.png) no-repeat left center; }
+	div {display: none;}
+	</style>
+</head>
+	
+<body>
+	<main id="faqs">
+		<h1>jQuery FAQs</h1>
+		<h2><a href="#">What is jQuery</a></h2>
+		<div>
+			<p>jQuery is a library of the JavaScript functions that you're most likely to need as you develop websites.</p>
+		</div>
+<h2><a href="#">Why is jQuery becoming so popular?</a></h2>
+<div>
+	<p>Three Reasons:</p>
+	<ul>
+		<li>It's free.</li>
+		<li>It lets you get more done in less time.</li>
+		<li>All of its functions are cross-browser compatible.</li>
+	</ul>
+</div>
+... 
+...
+	</main>
+	<script>
+	$(document).ready(function(evt) {
+		$("#faqs h2").click(function() {
+			$(this).toggleClass("minus");
+			if ($(this).attr("class") != "minus") {
+				$(this).next().hide();
+			}
+			else {
+				$(this).next().show();
+			}
+			evt.preventDefault(); 
+		});
+		$("#faqs").find("a:first").focus();
+	});
+	</script>
+</body>
+</html>
