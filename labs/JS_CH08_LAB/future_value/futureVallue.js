@@ -1,10 +1,10 @@
-var $ = function (id) {
-    return document.getElementById(id);
-};
-var calculateClick = function () {
-    var investment = parseFloat( $("investment").value );
-    var annualRate = parseFloat( $("rate").value );
-    var years = parseInt( $("years").value );
+
+
+$(document).ready(function() {
+	$('#calculate').click(function(){
+    var investment = parseFloat( $("#investment").val() );
+    var annualRate = parseFloat( $("#rate").val() );
+    var years = parseInt( $("#years").val() );
 	
 	if (isNaN(investment) || investment <= 0) {
 		alert("Investment must be a valid number greater than zero.");
@@ -21,10 +21,7 @@ var calculateClick = function () {
 		for ( i = 1; i <= years; i++ ) {
 			futureValue += futureValue * annualRate / 100;
 		}
-		$("future_value").value = futureValue.toFixed();
+		$("#future_value").val(futureValue.toFixed())
 	} 
-};
-window.onload = function () {
-    $("calculate").onclick = calculateClick;
-    $("investment").focus();
-};
+});
+});

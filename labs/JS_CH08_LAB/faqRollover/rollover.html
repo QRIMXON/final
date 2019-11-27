@@ -7,20 +7,27 @@
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="rollover.js"></script>
 	<style>
-	h2{ background: url(images/plus.png) no-repeat left center; }
-	h2.minus {background: url(images/minus.png) no-repeat left center; }
-	div {display: none;}
+    h1 {text-align:center;text-decoration: underline;}
+	h2{ background: url(images/plus.png) no-repeat left center; text-align:justify; }
+	h2.minus {background: url(images/minus.png) no-repeat left center ; text-align:justify; }
+    div {display: none;}
+    a {color:black}
+   
 	</style>
 </head>
 	
 <body>
+   
 	<main id="faqs">
-		<h1>jQuery FAQs</h1>
-		<h2><a href="#">What is jQuery</a></h2>
+        <h1>jQuery FAQs</h1>
+        <br>
+        <br>
+		<h2><br><br><a href="#">What is jQuery</a></h2>
 		<div>
 			<p>jQuery is a library of the JavaScript functions that you're most likely to need as you develop websites.</p>
-		</div>
-<h2><a href="#">Why is jQuery becoming so popular?</a></h2>
+        </div>
+        
+<h2><br><br><a href="#">Why is jQuery becoming so popular?</a></h2>
 <div>
 	<p>Three Reasons:</p>
 	<ul>
@@ -29,8 +36,18 @@
 		<li>All of its functions are cross-browser compatible.</li>
 	</ul>
 </div>
-... 
-...
+
+<h2><br><br><a href="#">Which is harder to learn: jQuery or JavaScript</a></h2>
+<div>
+    <p>There is no right answer to this question, as both have their positives and negatives, however jQuery was developed with
+        the intention of shortening JavaScript and condensing some of the code.</p>
+        <ul>
+            <li>Step 1: Learn basics of JavaScript</li>
+            <li>Step 2: Learn basics of jQuery</li>
+            <li>Step 3: Enjoy</li>
+        </ul>
+</div>
+
 	</main>
 	<script>
 	$(document).ready(function(evt) {
