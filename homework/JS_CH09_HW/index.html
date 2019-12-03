@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <main id="faqs">
+        <h1>jQuery FAQs</h1>
+        <h2><a href="#">What is jQuery?</a></h2>
+        <div>
+        <p>yes</p>  <!--div content-->
+        </div>
+        <h2><a href="#">Why is jQuery becoming so popular?</a></h2>
+        <div>
+                <p>yes</p>  <!--div content-->
+        </div>
+            <h2><a href="#">Which is harder to learn: jQuery or JavaScript?</a></h2>
+        <div>
+                <p>yes</p> <!--div content-->
+        </div>
+    </main>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script>
+$(document).ready(function() {
+    $("#faqs h2").click(
+        function() {
+            $(this).toggleClass("minus");
+            $(this).next().slideToggle(1000);
+        }
+    );
+})
+   
+    </script>
+</body>
+</html>
