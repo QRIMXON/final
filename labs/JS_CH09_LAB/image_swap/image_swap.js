@@ -3,16 +3,19 @@ $(document).ready(function() {
 	$("#image_list a").each(function() {
 		var swappedImage = new Image();
 		swappedImage.src = $(this).attr("href");
+		$("#image").fadeToggle(5000);
+			$("#caption").fadeToggle(5000);
 	});
 	
 	// set up event handlers for links    
 	$("#image_list a").click(function(evt) {
-
 		var imageURL = $(this).attr("href");
 		$("#image").attr("src", imageURL);
 				
 		var caption = $(this).attr("title");
 		$("#caption").text(caption);
+
+
 
 		// cancel the default action of the link
 	    evt.preventDefault();

@@ -1,79 +1,28 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+    <title>Carousel Animation</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="carousel.js"></script>
 </head>
-<body>
-    <main>
-        <h1>View Our Books</h1>
-        <div id="carousel">
-            <div id="left_button" class="button_panel">
-                <img src="images/left.jpg" alt=""></div>
-                <div id="display_panel">
-                    <ul id="image_list">
-                        <li><a href="newpage.html">
-                            <img src="images/book1.jpg" alt=""></a></li>
-                        <li><a href="newpage.html">
-                            <img src="images/book2.jpg" alt=""></a></li>
-                        <li><a href="newpage.html">
-                            <img src="images/book3.jpg" alt=""></a></li>
-                        <li><a href="newpage.html">
-                            <img src="images/book4.jpg" alt=""></a></li>  
-                        <li><a href="newpage.html">
-                            <img src="images/book5.jpg" alt=""></a></li>      
-                    </ul>
-                </div>
-                <div id="right_button" class="button_panel">
-                    <img src="images/right.jpg" alt=""></div>
+
+<body>   
+<main>
+    <div id="carousel">
+        <div id="left_button" class="button_panel"><img src="images/left.jpg" alt=""></div>
+        <div id="display_panel"> 
+            <ul id="image_list">
+                <li><a href="images/book1.jpg"><img src="images/book1.jpg"></a></li>
+                <li><a href="images/book2.jpg"><img src="images/book2.jpg" ></a></li>
+                <li><a href="images/book3.jpg"><img src="images/book3.jpg" ></a></li>
+                <li><a href="images/book4.jpg"><img src="images/book4.jpg" ></a></li>
+                <li><a href="images/book5.jpg"><img src="images/book5.jpg" ></a></li>
+            </ul>
         </div>
-
-    </main>
-    <script>
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-
-    <!--still not working with exercise code in-->
-    <script>
-
-    $(document).ready(function() {
-		   
-           var slider = $("#image_list");                     // slider = ul element
-           var leftProperty, newleftProperty;
-               
-           // the click event handler for the right button						
-           $("#right_button").click(function() { 
-               // get value of current left property
-               leftProperty = parseInt(slider.css("left"));
-               // determine new value of left property
-               if (leftProperty - 300 <= -900) {
-                   newLeftProperty = 0; }
-               else {
-                   newLeftProperty = leftProperty - 300; }
-               // use the animate function to change the left property
-               slider.animate( {left: newLeftProperty}, 1000);
-           });  // end click
-           
-           // the click event handler for the left button
-           $("#left_button").click(function() {
-               // get value of current right property
-               leftProperty = parseInt(slider.css("left"));
-               
-               // determine new value of left property
-               if (leftProperty < 0) {
-                   newLeftProperty = leftProperty + 300;
-               }
-               else {
-                   newLeftProperty = 0;
-               }
-               
-               // use the animate function to change the left property
-               slider.animate( {left: newLeftProperty}, 1000);				
-           });  // end click		
-       }); // end ready</script>
+        <div id="right_button" class="button_panel"><img src="images/right.jpg" alt=""></div>
+    </div>
+</main>
 </body>
 </html>
