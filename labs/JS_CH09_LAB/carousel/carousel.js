@@ -1,8 +1,8 @@
 $(document).ready(function() {
-	
+
 	var slider = $("#image_list");                     // slider = ul element
 	var leftProperty, newleftProperty;
-		
+
 	// the click event handler for the right button						
 	$("#right_button").click(function() { 
 		// get value of current left property
@@ -31,6 +31,9 @@ $(document).ready(function() {
 		
 		// use the animate function to change the left property
 		slider.animate( {left: newLeftProperty}, 1000);				
-	});  // end click	
+	});  // end click
+	$("#image").click(function(){    
+        $("#image").animate({height: "300px"});
+    });	
 	
 }); // end ready
