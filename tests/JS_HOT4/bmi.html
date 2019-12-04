@@ -9,37 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Hello, world!</title>
-    <style>
-    main {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 380px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 20px;
-  
-}
-h1, h2, ul, p {
-	margin: 0;
-	padding: 0;
-}
-h1 {
-	padding-bottom: .25em;
-	color: blue;
-}
-h2 {
-	font-size: 120%;
-	padding: .5em 0;
-}
-img {
-	height: 250px;
-}
-#slides img {
-	display: none;
-}
-
-
-    </style>
-
   </head>
   <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -60,37 +29,47 @@ img {
               </nav>
     <img src="images/logo2.png" max-width="100%" height="auto" alt="" style="float:right">
 
-
-
-    
-    <main>
-          
-            <h2 id="caption"></h2>
-            <img id="slide" src="images/MyPicture1.jpg" alt="">
-            <div id="slides"> 
-                <img src="images/MyPicture2.jpg" 
-                alt="">
-                <img src="images/MyPicture3.jpg" 
-                alt="">
-                <img src="images/MyPicture4.jpg" 
-                alt="">
-                <img src="images/MyPicture5.jpg" 
-                alt="">
-                <img src="images/MyPicture1.jpg"
-                 alt="">
+    <section class="container">
+            <h1 class="title is-2 has-text-centered">Calculate you body mass index</h1>
+            <div class="notification is-info">
+          Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. 
+                <ul>
+                    <li>Enter your weight in kilograms</li>
+                    <li>Enter your height in meters</li>
+                    <li>1 meter = 3.28084 feet</li>
+                    <li>1 kg = 2.20462 lbs</li>
+                    <li>Click calculate</li>
+                </ul>
+        </div>
+            <form class="box">
+                <div class="field">
+                <label for="" class="label">
+                    Weight
+                </label>
+                <input id="weight" class="input" type="number">
             </div>
-        </main>
+            
+            <div class="field">
+                <label class="label">
+                    Height:
+                </label>
+                <input id="height" class="input" type="text">
+            </div>
+                <input class="button is-link is-outlined" type="submit" value="calculate">
+            </form>
+            
+            <div class="result">
+                <h2 class="title"></h2>
+            </div>
+        </section>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="image_swap.js"></script>
 
-    
-
-   
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="bmi.js"></script>
   </body>
 </html>

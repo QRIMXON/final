@@ -10,36 +10,13 @@
 
     <title>Hello, world!</title>
     <style>
-    main {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 380px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 20px;
-  
-}
-h1, h2, ul, p {
-	margin: 0;
-	padding: 0;
-}
-h1 {
-	padding-bottom: .25em;
-	color: blue;
-}
-h2 {
-	font-size: 120%;
-	padding: .5em 0;
-}
-img {
-	height: 250px;
-}
-#slides img {
-	display: none;
-}
-
-
-    </style>
-
+            h1 {text-align:center;text-decoration: underline;}
+            h2{ background: url(images/plus.png) no-repeat left center; text-align:justify; }
+            h2.minus {background: url(images/minus.png) no-repeat left center ; text-align:justify; }
+            div {display: none;}
+            a {color:black}
+           
+            </style>
   </head>
   <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -62,24 +39,45 @@ img {
 
 
 
-    
-    <main>
-          
-            <h2 id="caption"></h2>
-            <img id="slide" src="images/MyPicture1.jpg" alt="">
-            <div id="slides"> 
-                <img src="images/MyPicture2.jpg" 
-                alt="">
-                <img src="images/MyPicture3.jpg" 
-                alt="">
-                <img src="images/MyPicture4.jpg" 
-                alt="">
-                <img src="images/MyPicture5.jpg" 
-                alt="">
-                <img src="images/MyPicture1.jpg"
-                 alt="">
+
+
+
+    <main id="faqs">
+            <h1>FAQs </h1>
+            <br>
+            <br>
+            <h2><br><br><a href="#">Plans & Pricing</a></h2>
+            <div>
+                <p>As the valley begins to close, the route transitions to a section of open forest. 
+                    Have fun and hang on tight! This area has a high density of trails for all ability 
+                    levels and serves as the unofficial hub of mountain bike activity in the South Shore. 
+                    You can find everyone out here having fun from people in body armor and downhill bikes 
+                    to families testing their kids limits to xc racer types riding intervals. 
+                    Out here you will find the most legal features including log rides, jumps and 
+                    rock rolls in South Tahoe including the new jumps, berms, rollers and hips TAMBA
+                     and SBTS built in 2014.</p>
             </div>
+            
+    <h2><br><br><a href="#">Personal Training</a></h2>
+    <div>
+            <p>Gnarly trail. When combined with Otero Upper, this trail is just crazy fast,
+                 flowy, amazingness. Flow trail is a bit tight at the top, but gets really fast
+                  as you transition to the lower Rush. There will be some short dismount sections 
+                  for most riders, but overall, the trail is fast and fun. 3..</p>
+    </div>
+    
+    <h2><br><br><a href="#">Age Requirements</a></h2>
+    <div>
+            <p>Logs embedded in the trail have been installed to signal technical terrain.
+                 They can be ridden in the winter depending on snow conditions. MBoSC has 
+                 partnered with land manager California Department of Forestry and Fire
+                  Protection (CAL FIRE) to build a four mile flow trail in Soquel Demonstration
+                   State Forest (SDSF). Technical singletrack in the Southside Hills above Kilbride. 
+                   But this trail does not relent for one second.</p>
+    </div>
+    
         </main>
+     
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -87,10 +85,8 @@ img {
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="image_swap.js"></script>
+	<script src="faqs.js"></script>
 
-    
 
-   
   </body>
 </html>

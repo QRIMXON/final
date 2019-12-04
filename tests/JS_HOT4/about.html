@@ -1,47 +1,31 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+                <!-- Required meta tags -->
+   <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            
+                <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            
+    
+	<title>Q &amp; A Rollovers</title>
+	<link rel="stylesheet" href="about.css">
 
-    <title>Hello, world!</title>
-    <style>
-    main {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 380px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 20px;
-  
-}
-h1, h2, ul, p {
-	margin: 0;
-	padding: 0;
-}
-h1 {
-	padding-bottom: .25em;
-	color: blue;
-}
-h2 {
-	font-size: 120%;
-	padding: .5em 0;
-}
-img {
-	height: 250px;
-}
-#slides img {
-	display: none;
-}
+	<style>
+		li {
+			display: inline;
+		}
 
+		h1 {
+			color: blue;
+			text-align: center;
+		}
+	</style>
+</head>
 
-    </style>
-
-  </head>
-  <body>
+<body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">
                         <img src="images/logo.png" max-width="100" height="100" class="img-rounded" alt="">
@@ -60,37 +44,31 @@ img {
               </nav>
     <img src="images/logo2.png" max-width="100%" height="auto" alt="" style="float:right">
 
+	<main>
+		<h1>Before and After</h1>
+		<p style="text-align: center;">Click on an image to enlarge.</p>
+		<ul id="image_list">
+			<li style="margin: 1.7em; padding:2em"><a href="images/release.jpg" title="Sir Chad"> <img src="thumbnails/release.jpg" alt="" width="100"></a>
+			</li>
+			<li style="margin: 1.7em; padding:2em"><a href="images/deer.jpg" title="Chad"> <img src="thumbnails/deer.jpg" alt="" width="100"></a></li>
+			<li style="margin: 1.7em; padding:2em"><a href="images/hero.jpg" title="Chad Jr."> <img src="thumbnails/hero.jpg" alt="" width="100"></a></li>
+			<li style="margin: 1.7em; padding:2em"><a href="images/bison.jpg" title="Chad Sr."> <img src="thumbnails/bison.jpg" alt="" width="100"></a></li>
+		</ul>
+		<h2 style="text-align: center;" id="caption">Sir Chad</h2>
+		<p style="padding-left: 15em;"><img id="main_image" src="images/release.jpg" alt=""></p>
+	</main>
 
 
-    
-    <main>
-          
-            <h2 id="caption"></h2>
-            <img id="slide" src="images/MyPicture1.jpg" alt="">
-            <div id="slides"> 
-                <img src="images/MyPicture2.jpg" 
-                alt="">
-                <img src="images/MyPicture3.jpg" 
-                alt="">
-                <img src="images/MyPicture4.jpg" 
-                alt="">
-                <img src="images/MyPicture5.jpg" 
-                alt="">
-                <img src="images/MyPicture1.jpg"
-                 alt="">
-            </div>
-        </main>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ 
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="image_swap.js"></script>
+	<script src="rollover.js"></script>
+</body>
 
-    
-
-   
-  </body>
 </html>
+
+
+
+
