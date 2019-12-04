@@ -1,13 +1,15 @@
 /* Base */
 html {
-  overflow-x: hidden; }
+  overflow-x: hidden ;
+overflow-y: scroll }
 
 body {
   line-height: 1.7;
   color: #666666;
   font-weight: 400;
   font-size: 1rem;
-background-color: rgb(237, 236, 234) }
+background-color: rgb(237, 236, 234);
+overflow: auto }
 
 ::-moz-selection {
   background: #000;
