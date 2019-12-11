@@ -1,0 +1,6 @@
+.morphext > .animated {
+    display: inline-block; color: red; font-size: 2em;
+}
+p {
+    font-size: 4em; color: black; font-style: italic, bold;
+}
