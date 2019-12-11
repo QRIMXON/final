@@ -1,0 +1,6 @@
+#navLink {color:white}
+
+footer {background-color:whitesmoke}
+
+.valid {display: none;}
+.error {color: red;  display: block;}
