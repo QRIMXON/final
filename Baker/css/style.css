@@ -116,15 +116,16 @@ HEADER
 ***********************************/
 
 .header {
-  background: url('../img/daisy-smiley.jpeg') no-repeat fixed;
+  background: url('../img/puppyrun.jpg') no-repeat fixed;
   background-size: cover;
-  min-height: 500px;
+  min-height: 730px;
   position: relative;
+  width: 100%;
 }
 
 .bg-color {
   background-color: rgba(0, 0, 0, 0.5);
-  min-height: 500px;
+  min-height: 730px;
 }
 
 #main-header {}
@@ -791,6 +792,7 @@ Responsive media queries
 @media (min-width: 451px) and (max-width: 767px) {
   .service-item, .blog-sec, .wrap-item, .loction-info {
     margin-bottom: 15px;
+    overflow: hidden;
   }
 }
 
@@ -809,6 +811,7 @@ Responsive media queries
     font-size: 33px;
   }
   body {
+    overflow-y: scroll;
     font-size: 14px;
   }
   .btn-download, .btn-more, .btn-download:hover, .btn-more:hover, .btn-download:focus, .btn-more:focus {

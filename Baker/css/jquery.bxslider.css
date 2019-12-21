@@ -190,15 +190,15 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #666\9;
+	background: #6669;
 	background: rgba(80, 80, 80, 0.75);
 	width: 100%;
 }
 
 .bx-wrapper .bx-caption span {
-	color: #fff;
+	color: white;
 	font-family: Arial;
 	display: block;
-	font-size: .85em;
+	font-size: .15em;
 	padding: 10px;
 }
